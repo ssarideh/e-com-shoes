@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import close from "../images/icon-close.svg";
 

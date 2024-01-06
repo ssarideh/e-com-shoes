@@ -33,8 +33,6 @@ const Main = ({
   };
 
   const { addToCart } = useCart();
-  const [cartAmount, setCartAmount] = useState(1);
-  // ... rest of your component
 
   const handleAddToCart = () => {
     const item = {
