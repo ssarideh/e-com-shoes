@@ -1,13 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img {
+  max-width: 100%;
 }
+
+ul {
+  list-style-type: none;
+}
+
+/* .nav{
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 70%;
+  height: 100%; 
+  transition: 0.3s ease-in-out; 
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+
+.nav.open {
+  @apply left-0 top-0 bg-white shadow;
+  transition: 0.3s ease-in-out;
+  z-index: 99;
+}
+
+.nav ul {
+  @apply flex flex-col gap-5 py-10;
+}
+ */
+
+
+ /* Common styles for both mobile and desktop */
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styles for mobile */
+@media screen and (max-width: 767px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 60%;
+    height: 100%; 
+    transition:  0.5s ease-in-out;;
+  }
+
+  .nav.open {
+    left: 0;
+    transition:  0.5s ease-in-out;
+    z-index: 99;
+    background: #ffffff;
+    padding-top: 2.5rem;
+    padding-left: 2rem;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column; 
+    padding-top: 2rem;
+    gap: 1rem;
+  }
+}
+
+/* Styles for desktop */
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .nav li:hover {
+    cursor: pointer;
+    @apply text-orange-500;
+    transition: 0.3s ease-in-out;
+  }
+}
+
